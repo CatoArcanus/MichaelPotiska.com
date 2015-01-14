@@ -15,13 +15,11 @@ Route::get ('/', array('as' => 'base', 'uses' => 'HomeController@base'));
 
 // gallery group
 Route::group (array('prefix' => 'gallery'), function() {	
-	Route::group (array('prefix' => 'batch-history'), function() {
-		Route::get ('/', 			array( 'as' => 'gallery', 			'uses' => 'GalleryController@index'));
-		Route::get ('/news', 		array( 'as' => 'gallery_news', 		'uses' => 'GalleryController@news'));
-		Route::get ('/graphics', 	array( 'as' => 'gallery_graphics', 	'uses' => 'GalleryController@graphics'));
-		Route::get ('/video', 		array( 'as' => 'gallery_video', 	'uses' => 'GalleryController@video'));
-		Route::get ('/photoshop', 	array( 'as' => 'gallery_photoshop', 'uses' => 'GalleryController@photoshop'));
-	});	
+	Route::get ('/', 			array( 'as' => 'gallery', 			'uses' => 'GalleryController@index'));
+	Route::get ('/news', 		array( 'as' => 'gallery_news', 		'uses' => 'GalleryController@news'));
+	Route::get ('/graphics', 	array( 'as' => 'gallery_graphics', 	'uses' => 'GalleryController@graphics'));
+	Route::get ('/video', 		array( 'as' => 'gallery_video', 	'uses' => 'GalleryController@video'));
+	Route::get ('/photoshop', 	array( 'as' => 'gallery_photoshop', 'uses' => 'GalleryController@photoshop'));
 });	
 
-Route::get ('resume', 	array('as' => 'logout', 'uses' => 'HomeController@resume'));
+Route::get ('/resume', 	array('as' => 'resume', 'uses' => 'HomeController@resume'));

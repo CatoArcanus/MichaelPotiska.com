@@ -1,6 +1,6 @@
 <?php
 
-class WebController extends BaseController {
+class GalleryController extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
